@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sibosmartpro.com/sitemap.xml
+Sitemap: https://www.sibosmartpro.com/sitemap.xml
