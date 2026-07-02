@@ -31,7 +31,7 @@
 <link rel="alternate" hreflang="x-default" href="https://www.sibosmartpro.com/" />
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"SIBO Smart Pro®","url":"https://www.sibosmartpro.com/","logo":"https://www.sibosmartpro.com/logo.png"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalDevice","name":"SIBO Smart Pro®","description":"Dispositivo para diagnóstico de SIBO mediante test de aliento con medición de hidrógeno y metano en consultorio","areaServed":[{"@type":"Country","name":"Argentina"},{"@type":"Country","name":"Chile"},{"@type":"Country","name":"México"},{"@type":"Country","name":"Colombia"}],"applicationCategory":"Gastroenterology","manufacturer":{"@type":"Organization","name":"SIBO Smart Pro®"},"url":"https://www.sibosmartpro.com/"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué es el test de SIBO?","acceptedAnswer":{"@type":"Answer","text":"Es un test de aire espirado que mide hidrógeno y metano para detectar sobrecrecimiento bacteriano en el intestino delgado."}},{"@type":"Question","name":"¿Cuánto dura el test de SIBO?","acceptedAnswer":{"@type":"Answer","text":"El test dura aproximadamente 90 minutos, con mediciones en los tiempos T0, T30, T60 y T90."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué es el test de SIBO?","acceptedAnswer":{"@type":"Answer","text":"Es un test de aire espirado que mide hidrógeno y metano para detectar sobrecrecimiento bacteriano en el intestino delgado."}},{"@type":"Question","name":"¿Cómo funciona un equipo para test de SIBO en consultorio?","acceptedAnswer":{"@type":"Answer","text":"SIBO Smart Pro® permite realizar el test completo dentro del consultorio, sin depender de laboratorios externos. El equipo mide la concentración de hidrógeno espirado en distintos tiempos (T0, T30, T60, T90) y genera automáticamente un informe con el resultado."}},{"@type":"Question","name":"¿Cuánto dura el test de SIBO?","acceptedAnswer":{"@type":"Answer","text":"El test dura aproximadamente 90 minutos, con mediciones en los tiempos T0, T30, T60 y T90."}},{"@type":"Question","name":"¿Quiénes pueden usar SIBO Smart Pro®?","acceptedAnswer":{"@type":"Answer","text":"Está pensado para gastroenterólogos y nutricionistas en Argentina y LATAM que quieran ofrecer diagnóstico de SIBO en el mismo consultorio, sin derivar al paciente a un laboratorio externo."}},{"@type":"Question","name":"¿SIBO Smart Pro® mide hidrógeno y metano?","acceptedAnswer":{"@type":"Answer","text":"Sí, el equipo permite la detección de ambos gases, fundamentales para un diagnóstico completo, ya que algunos pacientes presentan predominio de metano en lugar de hidrógeno."}}]}</script>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
     :root {
@@ -142,6 +142,44 @@
     .kit-item-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; color: white; margin-bottom: 0.5rem; }
     .kit-item-desc { font-size: 0.82rem; color: rgba(255,255,255,0.45); line-height: 1.65; }
 
+    /* FAQ */
+    .faq-list { max-width: 720px; }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 0;
+    }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-question {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--ink);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      user-select: none;
+    }
+    .faq-question::-webkit-details-marker { display: none; }
+    .faq-icon {
+      font-family: 'DM Mono', monospace;
+      font-size: 1.1rem;
+      color: var(--gold);
+      flex-shrink: 0;
+      transition: transform 0.25s;
+    }
+    .faq-item[open] .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 620px;
+      margin-top: 1rem;
+      padding-right: 2rem;
+    }
+
     /* ══ CONTACTO ══ */
     .contact-section { background: var(--paper); padding: 7rem 5rem; }
     .contact-inner { display: grid; grid-template-columns: 1fr 1.1fr; gap: 6rem; align-items: start; max-width: 1100px; margin: 0 auto; }
@@ -236,6 +274,7 @@
   <ul class="nav-links">
     <li><a href="#protocolo">Ver Metodología</a></li>
     <li><a href="#kit">Ver Producto</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
 </nav>
@@ -252,6 +291,7 @@
     </h1>
     <p class="hero-subtitle">
       SIBO Smart Pro® es el equipo para test de SIBO diseñado para uso en consultorio. Combinamos tecnología de vanguardia con una metodología propia de 90 minutos, logrando el test del aire espirado para SIBO más accesible de LATAM. Diseñado para el gastroenterólogo y el equipo multidisciplinario de nutrición.
+    </p>
     <div class="hero-actions">
       <a href="#kit" class="btn-primary">Ver Producto</a>
       <a href="#protocolo" class="btn-ghost">Ver Metodología</a>
@@ -313,14 +353,14 @@
       <p class="section-body">
         Los equipos hospitalarios para análisis de SIBO poseen un costo que los hace casi inaccesibles para la práctica ambulatoria.
         En Latinoamérica no existe hoy una solución integral para evaluación de SIBO de menor costo adaptada al consultorio del especialista.
-        Millones de personas con sospecha de SIBO quedan sin evaluación por falta por falta de un equipo de detección de SIBO accesible para el consultorio del especialista.
+        Millones de personas con sospecha de SIBO quedan sin evaluación por falta de un equipo de detección de SIBO accesible para el consultorio del especialista.
       </p>
     </div>
     <div class="solution-card">
       <div class="section-tag">La solución</div>
       <h2 class="section-title">Tecnología <br><em>adaptada</em></h2>
       <p class="section-body">
-        Desarrollamos una metodología de evaluación de 90 min y la adaptamos para ser utilizada con un equipo de medición importado, validado para el monitoreo de gases espirados. El resultado: una solución integral para evaluación de SIBO, accesible y diseñada a partir de la experiencia práctica.Un equipo para test de SIBO pensado para uso diario en el consultorio.
+        Desarrollamos una metodología de evaluación de 90 min y la adaptamos para ser utilizada con un equipo de medición importado, validado para el monitoreo de gases espirados. El resultado: una solución integral para evaluación de SIBO, accesible y diseñada a partir de la experiencia práctica. Un equipo para test de SIBO pensado para uso diario en el consultorio.
       </p>
       <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.15);">
         <span style="font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-light); display: block; margin-bottom: 0.6rem;">✓ Ventaja</span>
@@ -400,6 +440,57 @@
       <div class="kit-item-title">Acompañamiento post-venta</div>
       <p class="kit-item-desc">Soporte directo. Resolución de dudas y consultas técnicas y sobre el método de medición.</p>
     </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-tag">Preguntas frecuentes</div>
+  <h2 class="section-title">Todo lo que necesitás saber<br><em>sobre el test de SIBO</em></h2>
+  <p class="section-body" style="margin-bottom: 3rem;">
+    Las dudas más comunes de profesionales que evalúan incorporar el equipo para test de SIBO en su consultorio.
+  </p>
+
+  <div class="faq-list">
+    <details class="faq-item" open>
+      <summary class="faq-question">
+        ¿Qué es el test de SIBO?
+        <span class="faq-icon">+</span>
+      </summary>
+      <p class="faq-answer">El test de SIBO es un estudio de aire espirado que mide los niveles de hidrógeno y metano exhalados por el paciente después de ingerir un sustrato (generalmente lactulosa o glucosa). Permite detectar el sobrecrecimiento bacteriano del intestino delgado (SIBO), una de las causas más frecuentes de distensión abdominal, dolor y alteraciones del tránsito intestinal.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-question">
+        ¿Cómo funciona un equipo para test de SIBO en consultorio?
+        <span class="faq-icon">+</span>
+      </summary>
+      <p class="faq-answer">SIBO Smart Pro® permite realizar el test completo dentro del consultorio, sin depender de laboratorios externos. El equipo mide la concentración de hidrógeno espirado en distintos tiempos (T0, T30, T60, T90) y genera automáticamente un informe con el resultado, siguiendo los criterios del Consenso Norteamericano 2017.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-question">
+        ¿Cuánto dura el test de SIBO?
+        <span class="faq-icon">+</span>
+      </summary>
+      <p class="faq-answer">El estudio dura aproximadamente 90 minutos, con mediciones cada 30 minutos desde el inicio del test.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-question">
+        ¿Quiénes pueden usar SIBO Smart Pro®?
+        <span class="faq-icon">+</span>
+      </summary>
+      <p class="faq-answer">Está pensado para gastroenterólogos y nutricionistas en Argentina y LATAM que quieran ofrecer diagnóstico de SIBO en el mismo consultorio, sin derivar al paciente a un laboratorio externo.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-question">
+        ¿SIBO Smart Pro® mide hidrógeno y metano?
+        <span class="faq-icon">+</span>
+      </summary>
+      <p class="faq-answer">Sí, el equipo permite la detección de ambos gases, fundamentales para un diagnóstico completo, ya que algunos pacientes presentan predominio de metano (SIBO-M) en lugar de hidrógeno.</p>
+    </details>
   </div>
 </section>
 
@@ -500,25 +591,7 @@
     <a href="#protocolo" class="btn-outline-white">Ver Metodología</a>
   </div>
 </section>
-<section id="faq" style="padding: 60px 20px; max-width: 800px; margin: 0 auto;">
-  <h2>Preguntas frecuentes sobre el test de SIBO</h2>
 
-  <h3>¿Qué es el test de SIBO?</h3>
-  <p>El test de SIBO es un estudio de aire espirado que mide los niveles de hidrógeno y metano exhalados por el paciente después de ingerir un sustrato (generalmente lactulosa o glucosa). Permite detectar el sobrecrecimiento bacteriano del intestino delgado (SIBO), una de las causas más frecuentes de distensión abdominal, dolor y alteraciones del tránsito intestinal.</p>
-
-  <h3>¿Cómo funciona un equipo para test de SIBO en consultorio?</h3>
-  <p>SIBO Smart Pro® permite realizar el test completo dentro del consultorio, sin depender de laboratorios externos. El equipo mide la concentración de hidrógeno espirado en distintos tiempos (T0, T30, T60, T90) y genera automáticamente un informe con el resultado, siguiendo los criterios del Consenso Norteamericano 2017.</p>
-
-  <h3>¿Cuánto dura el test de SIBO?</h3>
-  <p>El estudio dura aproximadamente 90 minutos, con mediciones cada 30 minutos desde el inicio del test.</p>
-
-  <h3>¿Quiénes pueden usar SIBO Smart Pro®?</h3>
-  <p>Está pensado para gastroenterólogos y nutricionistas en Argentina y LATAM que quieran ofrecer diagnóstico de SIBO en el mismo consultorio, sin derivar al paciente a un laboratorio externo.</p>
-
-  <h3>¿SIBO Smart Pro® mide hidrógeno y metano?</h3>
-  <p>Sí, el equipo permite la detección de ambos gases, fundamentales para un diagnóstico completo, ya que algunos pacientes presentan predominio de metano (SIBO-M) en lugar de hidrógeno.</p>
-</section>
-  
 <!-- FOOTER -->
 <footer>
   <div class="footer-top">
@@ -535,6 +608,7 @@
   <div class="footer-bottom">
     <p class="footer-note">
       Aviso Legal: SIBOSmartPro® es una solución integral, un programa de capacitación, soporte y optimización metodológica para profesionales de la salud. El hardware de medición provisto en nuestros kits pertenece a sus respectivos fabricantes, quienes mantienen todos los derechos de propiedad intelectual sobre su dispositivo nativo. SIBOSmartPro® no modifica el hardware original y opera como un facilitador para la integración de esta tecnología mediante metodologías propias en el ámbito de la evaluación funcional. El usuario reconoce que el equipo y la metodología provista por SIBOSmartPro® son herramientas de evaluación complementaria y monitoreo, y en ningún caso sustituyen el juicio clínico, ni las pruebas tradicionales. Los datos, gráficos y perfiles fermentativos arrojados por el sistema deben ser interpretados única y exclusivamente por un profesional médico. La Empresa no asume responsabilidad alguna por los diagnósticos, planes de abordaje, tratamientos o decisiones clínicas que el profecional tome basándose en la información obtenida a través del uso de este sistema en su consultorio.
+    </p>
     <div class="footer-copy">© 2026 SIBOSmartPro®</div>
   </div>
 </footer>
