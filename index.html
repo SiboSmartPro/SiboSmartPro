@@ -143,6 +143,8 @@
 
     /* ESTADO DEL DESARROLLO */
     .kit-section { background: var(--ink); color: white; }
+    .kit-section .section-title { color: white; }
+    .kit-section .section-title em { color: var(--gold-light); }
     .kit-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-top: 2rem; background: rgba(255,255,255,0.05); }
     .kit-item { background: var(--ink); padding: 2.5rem 2rem; border: 1px solid rgba(255,255,255,0.05); }
     .kit-item-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; display: block; }
@@ -151,7 +153,7 @@
     .kit-item-link { display: inline-block; margin-top: 1.25rem; font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-light); text-decoration: none; border-bottom: 1px solid rgba(232,201,126,0.4); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
     .kit-item-link:hover { color: white; border-color: white; }
 
-    /* VIDEO (desactivado mientras el video esté en "no listado") */
+    /* VIDEO */
     .video-section { background: var(--cream); text-align: center; }
     .video-wrapper {
       position: relative;
@@ -293,6 +295,7 @@
   <ul class="nav-links" id="navLinks">
     <li><a href="#protocolo">Metodología</a></li>
     <li><a href="#estado">Estado del desarrollo</a></li>
+    <li><a href="#video">Demo</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
 </nav>
@@ -427,6 +430,7 @@
 <!-- ESTADO DEL DESARROLLO -->
 <section class="kit-section" id="estado">
   <div class="section-tag" style="color: var(--gold);">Estado del desarrollo</div>
+  <h2 class="section-title">Lo que incluye <em>el producto</em></h2>
   <div class="kit-grid">
     <div class="kit-item">
       <span class="kit-item-label">Equipo</span>
@@ -444,36 +448,31 @@
       <p class="kit-item-desc">Medición basal y mediciones seriadas cada 30 minutos, con guía práctica de lectura de curvas.</p>
     </div>
     <div class="kit-item">
-      <span class="kit-item-label">Profesionales interesados</span>
-      <div class="kit-item-title">Seguir el avance</div>
-      <p class="kit-item-desc">Podés dejarnos tus datos para que te contemos cómo avanza el desarrollo.</p>
-      <a href="#contacto" class="kit-item-link">Dejar mis datos</a>
+      <span class="kit-item-label">Transporte</span>
+      <div class="kit-item-title">Maleta de transporte</div>
+      <p class="kit-item-desc">Maleta para guardar y trasladar el equipo junto con sus accesorios, pensada para llevarlo de un consultorio a otro.</p>
     </div>
   </div>
 </section>
 
-<!--
-  SECCIÓN VIDEO — desactivada mientras el video esté en "no listado" en YouTube.
-  Para reponerla: borrar esta línea y la línea de cierre del comentario más abajo.
-
+<!-- VIDEO -->
 <section class="video-section" id="video">
   <div class="section-tag" style="justify-content: center;">Demo</div>
   <h2 class="section-title">Ver el prototipo <em>en funcionamiento</em></h2>
   <p class="section-body" style="margin: 0 auto;">
-    Registro de una medición con el prototipo Multi-Test: toma de muestra, curva en tiempo real y generación del reporte.
+    Registro de una medición con el prototipo Multi-Test: toma de muestra, curva en tiempo real y generación del informe por el profesional (el software no realiza el diagnóstico).
   </p>
   <div class="video-wrapper">
     <iframe
       src="https://www.youtube.com/embed/dyWet8mYasY"
       title="Prototipo SIBO Smart Pro en funcionamiento"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen>
     </iframe>
   </div>
 </section>
-
-  Fin de la sección video desactivada.
--->
 
 <!-- CONTACTO -->
 <section class="contact-section" id="contacto">
