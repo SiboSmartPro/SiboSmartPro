@@ -153,23 +153,6 @@
     .kit-item-link { display: inline-block; margin-top: 1.25rem; font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-light); text-decoration: none; border-bottom: 1px solid rgba(232,201,126,0.4); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
     .kit-item-link:hover { color: white; border-color: white; }
 
-    /* VIDEO */
-    .video-section { background: var(--cream); text-align: center; }
-    .video-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      aspect-ratio: 16 / 9;
-      margin: 3rem auto 0;
-      box-shadow: 0 20px 60px rgba(13,17,23,0.15);
-    }
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      border: none;
-    }
-
     /* CONTACTO */
     .contact-section { background: var(--paper); padding: 7rem 5rem; }
     .contact-inner { display: grid; grid-template-columns: 1fr 1.1fr; gap: 6rem; align-items: start; max-width: 1100px; margin: 0 auto; }
@@ -295,7 +278,6 @@
   <ul class="nav-links" id="navLinks">
     <li><a href="#protocolo">Metodología</a></li>
     <li><a href="#estado">Estado del desarrollo</a></li>
-    <li><a href="#video">Demo</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
 </nav>
@@ -452,25 +434,6 @@
       <div class="kit-item-title">Maleta de transporte</div>
       <p class="kit-item-desc">Maleta para guardar y trasladar el equipo junto con sus accesorios, pensada para llevarlo de un consultorio a otro.</p>
     </div>
-  </div>
-</section>
-
-<!-- VIDEO -->
-<section class="video-section" id="video">
-  <div class="section-tag" style="justify-content: center;">Demo</div>
-  <h2 class="section-title">Ver el prototipo <em>en funcionamiento</em></h2>
-  <p class="section-body" style="margin: 0 auto;">
-    Prototipo del equipo: toma de muestra, curva en tiempo real y generación del informe por el profesional (el software no realiza el diagnóstico).
-  </p>
-  <div class="video-wrapper">
-    <iframe
-      src="https://www.youtube.com/embed/dyWet8mYasY"
-      title="Prototipo SIBO Smart Pro en funcionamiento"
-      loading="lazy"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
   </div>
 </section>
 
